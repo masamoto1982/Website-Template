@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // İ’èƒtƒ@ƒCƒ‹ƒ`ƒFƒbƒN
+    // è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
     if (typeof SiteConfig === 'undefined') {
         console.error("Config file (SiteConfig) is not loaded.");
         return;
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const c = SiteConfig;
 
     // ------------------------------------------------------------------------
-    // 0. ƒe[ƒ}ƒJƒ‰[‚Ì“K—p (CSS•Ï”‚Ìã‘‚«)
+    // 0. ãƒ†ãƒ¼ãƒã‚«ãƒ©ãƒ¼ã®é©ç”¨ (CSSå¤‰æ•°ã®ä¸Šæ›¸ã)
     // ------------------------------------------------------------------------
     if (c.theme) {
         const root = document.documentElement;
@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ------------------------------------------------------------------------
-    // 1. ƒwƒbƒ_[î•ñ‚Ì¶¬ (#js-header)
+    // 1. ãƒ˜ãƒƒãƒ€ãƒ¼æƒ…å ±ã®ç”Ÿæˆ (#js-header)
     // ------------------------------------------------------------------------
     const headerEl = document.getElementById('js-header');
     if (headerEl) {
         headerEl.innerHTML = `
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" class="icon logo-icon" alt="${c.company.name} ƒƒS">
+                    <img src="images/logo.png" class="icon logo-icon" alt="${c.company.name} ãƒ­ã‚´">
                 </a>
             </div>
             <div class="title-area">
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="index.html">${c.meta.title}</a>
                 </h1>
                 <address>
-                    §${c.company.postCode}<br>
+                    ã€’${c.company.postCode}<br>
                     ${c.company.address}<br>
                     <a href="tel:${c.company.tel}">${c.company.tel}</a>
                     <a href="mailto:${c.company.email}">${c.company.email}</a>
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ------------------------------------------------------------------------
-    // 2. ƒOƒ[ƒoƒ‹ƒiƒrƒQ[ƒVƒ‡ƒ“‚Ì¶¬ (#js-global-nav)
+    // 2. ã‚°ãƒ­ãƒ¼ãƒãƒ«ãƒŠãƒ“ã‚²ãƒ¼ã‚·ãƒ§ãƒ³ã®ç”Ÿæˆ (#js-global-nav)
     // ------------------------------------------------------------------------
     const navEl = document.getElementById('js-global-nav');
     if (navEl) {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ------------------------------------------------------------------------
-    // 3. ƒTƒCƒhƒo[‚Ì¶¬ (#js-side-nav)
+    // 3. ã‚µã‚¤ãƒ‰ãƒãƒ¼ã®ç”Ÿæˆ (#js-side-nav)
     // ------------------------------------------------------------------------
     const sideNavEl = document.getElementById('js-side-nav');
     if (sideNavEl) {
@@ -77,11 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sideNavEl.innerHTML = `
             <div class="item-1">
-                <p class="label"><span>Service</span>‹Æ–±ˆÄ“à</p>
+                <p class="label"><span>Service</span>æ¥­å‹™æ¡ˆå†…</p>
                 <ul>${serviceItems}</ul>
             </div>
             <div class="item-2">
-                <p class="label"><span>Reference</span>QlƒTƒCƒg</p>
+                <p class="label"><span>Reference</span>å‚è€ƒã‚µã‚¤ãƒˆ</p>
                 <ul>${refItems}</ul>
             </div>
             ${socialHtml}
@@ -89,19 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ------------------------------------------------------------------------
-    // 4. ‰ïĞŠT—vƒe[ƒuƒ‹ (#js-company-table)
+    // 4. ä¼šç¤¾æ¦‚è¦ãƒ†ãƒ¼ãƒ–ãƒ« (#js-company-table)
     // ------------------------------------------------------------------------
     const companyTableEl = document.getElementById('js-company-table');
     if (companyTableEl) {
         companyTableEl.innerHTML = `
             <table>
-                <tr><th>‰ïĞ–¼</th><td>${c.company.name}</td></tr>
-                <tr><th>‰p•\‹L</th><td>${c.company.englishName}</td></tr>
-                <tr><th>‘ã•\Ò</th><td>${c.company.representative}</td></tr>
+                <tr><th>ä¼šç¤¾å</th><td>${c.company.name}</td></tr>
+                <tr><th>è‹±è¡¨è¨˜</th><td>${c.company.englishName}</td></tr>
+                <tr><th>ä»£è¡¨è€…</th><td>${c.company.representative}</td></tr>
                 <tr>
-                    <th>ZŠ</th>
+                    <th>ä½æ‰€</th>
                     <td>
-                        §${c.company.postCode}<br>
+                        ã€’${c.company.postCode}<br>
                         ${c.company.address}
                         <div class="gmap">
                             <iframe src="${c.company.mapUrl}" loading="lazy" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td>
                         <img alt="QR" class="left" src="images/qr.png">
                         <a href="${c.company.url}" target="_self">${c.company.url}</a>
-                        <p>URL‚ğŒg‘Ñ’[––‚Éæ‚è‚Ş‚É‚ÍAQRƒR[ƒh&reg;‚ª•Ö—˜‚Å‚·B<small>QRƒR[ƒh&reg;‚ÍŠ”®‰ïĞƒfƒ“ƒ\[ƒEƒF[ƒu‚Ì“o˜^¤•W‚Å‚·B</small></p>
+                        <p>URLã‚’æºå¸¯ç«¯æœ«ã«å–ã‚Šè¾¼ã‚€ã«ã¯ã€QRã‚³ãƒ¼ãƒ‰&reg;ãŒä¾¿åˆ©ã§ã™ã€‚<small>QRã‚³ãƒ¼ãƒ‰&reg;ã¯æ ªå¼ä¼šç¤¾ãƒ‡ãƒ³ã‚½ãƒ¼ã‚¦ã‚§ãƒ¼ãƒ–ã®ç™»éŒ²å•†æ¨™ã§ã™ã€‚</small></p>
                     </td>
                 </tr>
             </table>
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ------------------------------------------------------------------------
-    // 5. ŠÈˆÕ‚¨–â‚¢‡‚í‚¹ƒe[ƒuƒ‹ (#js-contact-table)
+    // 5. ç°¡æ˜“ãŠå•ã„åˆã‚ã›ãƒ†ãƒ¼ãƒ–ãƒ« (#js-contact-table)
     // ------------------------------------------------------------------------
     const contactTableEl = document.getElementById('js-contact-table');
     if (contactTableEl) {
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td>
                          <img alt="QR" class="left" src="images/qr.png">
                          <a href="${c.company.url}" target="_self">${c.company.url}</a>
-                         <p>URL‚ğŒg‘Ñ’[––‚Éæ‚è‚Ş‚É‚ÍAQRƒR[ƒh&reg;‚ª•Ö—˜‚Å‚·B<small>QRƒR[ƒh&reg;‚ÍŠ”®‰ïĞƒfƒ“ƒ\[ƒEƒF[ƒu‚Ì“o˜^¤•W‚Å‚·B</small></p>
+                         <p>URLã‚’æºå¸¯ç«¯æœ«ã«å–ã‚Šè¾¼ã‚€ã«ã¯ã€QRã‚³ãƒ¼ãƒ‰&reg;ãŒä¾¿åˆ©ã§ã™ã€‚<small>QRã‚³ãƒ¼ãƒ‰&reg;ã¯æ ªå¼ä¼šç¤¾ãƒ‡ãƒ³ã‚½ãƒ¼ã‚¦ã‚§ãƒ¼ãƒ–ã®ç™»éŒ²å•†æ¨™ã§ã™ã€‚</small></p>
                     </td>
                 </tr>
             </table>
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ------------------------------------------------------------------------
-    // 6. ƒtƒbƒ^[ (#js-footer)
+    // 6. ãƒ•ãƒƒã‚¿ãƒ¼ (#js-footer)
     // ------------------------------------------------------------------------
     const footerEl = document.getElementById('js-footer');
     if (footerEl) {
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ------------------------------------------------------------------------
-    // 7. ƒXƒ‰ƒCƒhƒVƒ‡[‹@”\
+    // 7. ã‚¹ãƒ©ã‚¤ãƒ‰ã‚·ãƒ§ãƒ¼æ©Ÿèƒ½
     // ------------------------------------------------------------------------
     const slideshow = document.getElementById("slideshow");
     if (slideshow) {
