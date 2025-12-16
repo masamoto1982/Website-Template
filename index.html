@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>www.masamoto.org | 新着情報</title>
+  <meta content="http://www.masamoto.org/" name="description">
+  <link href="css/style.css" media="screen" rel="stylesheet" />
+  <link href="css/print.css" media="print" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダー (JSで生成) -->
+    <header id="js-header" class="site-header"></header>
+
+    <!-- グローバルナビ (JSで生成) -->
+    <nav id="js-global-nav" class="global-nav"></nav>
+
+    <main class="content-wrapper flexbox-a">
+      <!-- サイドナビ (JSで生成) -->
+      <nav id="js-side-nav" class="side-nav"></nav>
+
+      <article class="main-content">
+        <!-- コンテンツ固有の部分のみ記述 -->
+        <section class="top-slideshow">
+          <div id="slideshow">
+            <img src="images/photo-1.png" alt="Slide 1" />
+            <img src="images/photo-2.png" alt="Slide 2" />
+            <img src="images/photo-3.png" alt="Slide 3" />
+            <img src="images/photo-4.png" alt="Slide 4" />
+            <img src="images/photo-5.png" alt="Slide 5" />
+          </div>
+        </section>
+
+        <div class="info-boxes flexbox-b">
+          <section class="box-1">
+            <h2 class="label-1"><span>Lorem ipsum</span>box-1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          </section>
+          <section class="box-2">
+            <h2 class="label-2"><span>Lorem ipsum</span>box-2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          </section>
+          <section class="box-3">
+            <h2 class="label-3"><span>Lorem ipsum</span>box-3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          </section>
+        </div>
+
+        <div class="qr-box-wrapper flexbox-b">
+          <section class="box-a">
+            <h2 class="label-4"><span>Lorem ipsum</span>box-a</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          </section>
+          <section class="box-b" aria-label="モバイルアクセス情報">
+            <h2 class="label-5"><span>For Mobile</span>box-b</h2>
+            <img alt="QR Code" class="left" src="images/qr.png">
+            <!-- 会社URLなどはJSで制御可能だが、QRコードの説明などは個別コンテンツとしてここに残すことも可能 -->
+            <!-- ここでは一貫性のため、JSから生成することも可能だが、固有コンテンツとして記述 -->
+            <p>
+                <a href="index.html" target="_self">www.masamoto.org</a><br>
+                URLを携帯端末に取り込むには、QRコード&reg;が便利です。
+            </p>
+            <small>QRコード&reg;は株式会社デンソーウェーブの登録商標です。</small>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <!-- フッター (JSで生成) -->
+    <footer id="js-footer" class="site-footer"></footer>
+  </div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
