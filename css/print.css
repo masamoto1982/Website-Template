@@ -1,0 +1,128 @@
+/* ---------------------------------------------------------------------- */
+/* 印刷用スタイルシート */
+/* ---------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  color: #333;
+  background: #fff !important;
+  font-size: 12pt;
+}
+
+/* 印刷に不要な要素を非表示にする */
+.site-header .title-area address,
+.global-nav,
+.side-nav,
+.social-links,
+.site-footer,
+.gmap,
+#slideshow,
+.box-b small,
+.logo-icon
+{
+  display: none !important;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+}
+
+/* ヘッダーの調整 */
+.site-header {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 2px solid #333;
+  background: none !important;
+  text-align: left;
+}
+.logo {
+  text-align: left;
+  padding: 0;
+}
+.site-header .title-area {
+  display: block;
+}
+.site-header h1 {
+  font-size: 150%;
+  margin: 0;
+}
+.site-header .subtitle {
+    display: none;
+}
+
+/* メインコンテンツのレイアウト調整 */
+.content-wrapper {
+  display: block;
+  padding-top: 0;
+}
+
+.main-content {
+  width: 100%;
+  padding: 0;
+  background: none !important;
+  min-height: auto;
+}
+
+section {
+  padding: 10px 0;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background: #fff !important;
+  page-break-inside: avoid;
+  overflow: visible;
+}
+
+.left_fix, .right_fix, .left, .right {
+  float: none;
+  width: auto;
+  max-width: 100%;
+  margin: 10px 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* リンクを印刷時にURL付きで表示 */
+a:link, a:visited {
+  color: #000;
+  text-decoration: underline;
+}
+article a[href]:after {
+  content: " (" attr(href) ")";
+  font-size: 90%;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+table th, table td {
+  border: 1px solid #333;
+  padding: 8px;
+  background-color: #f0f0f0 !important;
+}
+table td {
+    background-color: #fff !important;
+}
+
+h2 {
+    page-break-before: always;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+h2:first-child {
+    page-break-before: auto;
+}
+
+.info-boxes, .qr-box-wrapper {
+    display: block;
+}
+
+.box-1, .box-2, .box-3, .box-a, .box-b {
+    margin: 0 0 10px 0;
+    width: 100%;
+    flex: auto;
+    border: 1px solid #ccc;
+    background: #fff !important;
+    page-break-inside: avoid;
+}
